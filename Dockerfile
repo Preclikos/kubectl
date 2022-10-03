@@ -4,6 +4,8 @@ ARG KUBE_VERSION="v1.25.2"
 
 COPY entrypoint.sh /entrypoint.sh
 
+RUN echo $HTTP_PROXY
+RUN echo $http_proxy
 RUN chmod +x /entrypoint.sh 
 RUN apt update
 RUN apt install -y curl ca-certificates openssl
